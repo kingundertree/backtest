@@ -1,9 +1,10 @@
+.con{width: 320px; height: 480px;}
 .wrap{ width:320px;}
 body{ position: relative;}
 .menu,.mycustomer,.cover{ position:absolute; background-color: #fff;}
 .menu{ z-index: 1; top: 0; left: 0; }
 .mycustomer{ z-index: 2; top: 0; left: 0px;}
-.cover{ display: none; z-index: 3; top: 0; left: 0; background-color: rgba(0,0,0,0.3); width: 100%; height: 550px;}
+.cover{ display: none; z-index: 3; top: 0; left: 0; background-color: rgba(0,0,0,0.3); width: 100%; height: 100%;}
 
 /*登陆部分样式*/
 .loginarea input[type="number"],.loginarea input[type="password"] { width: 180px; height: 22px;}
@@ -16,18 +17,21 @@ body{ position: relative;}
 .menu nav li{ line-height: 25px; padding-left: 1.5em; border-bottom:1px solid #000; color: #fff; }
 .mycustomer header{ height: 35px; line-height: 35px; background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0,#D2171C),color-stop(0.6,#A71418),color-stop(1,#841215));}
 .mycustomer header a{ display: block; width: 45px; text-align: center;}
-.menuicon{ font-size: 2em;}
-.appname{ display: block; width: 230px; text-align: center;}
-.freshicon{ font-size: 14px;}
 
 /*navbar区域*/
 .mycustomer header{ /*position: absolute; top: 0; left: 0;*/}
+.mycustomer header span{ display: block;}
+.menuicon{ font-size: 2em;}
+.freshicon{ font-size: 13px;}
+.menuicon,.freshicon{ width: 50px; text-align: center; line-height: 35px;}
+.appname{ display: block; width: 200px; text-align: center;}
+
 /*搜索区域*/
 .searchinput[type="search"]{ width: 280px; height: 30px; margin:15px 20px 0 20px; line-height: 30px;}
 
 /*客户列表区域样式*/
 .customerlistall{ margin-top: 15px;}
-.customerlistall dl{ width: 100%; height: 100px; border-top:1px solid #999; /*background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0,#fff),color-stop(0.5,#999),color-stop(1,#fff));*/}
+.customerlistall dl{ width: 100%; height: 70px; border-top:1px solid #999; /*background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0,#fff),color-stop(0.5,#999),color-stop(1,#fff));*/}
 .customerlistall dl:hover,.customerlistall dl:active{ /*background-color: #666;  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0,#999),color-stop(0.5,#fff),color-stop(1,#999));*/}
 .customerlistall dl:first-child{/*-webkit-border-top-left-radius: 8px;-webkit-border-top-right-radius: 4px;*/ }
 .customerlistall dl:last-child{ border-bottom:1px solid #999; /*-webkit-border-bottom-left-radius: 4px;-webkit-border-bottom-right-radius: 8px; */}
@@ -36,8 +40,12 @@ body{ position: relative;}
 .customerlistall dl dd b{ line-height: 35px;}
 .customerlistall dl dd.fl span{ color:#999; font-size: 12px; line-height: 16px;}
 .customerlistall dl dd.fr{ width: 60px; }
-.customerlistall dl dd.fr p{ line-height: 40px; color: #666; font-size: 14px;}
+.customerlistall dl dd.fr p.lasttime{ line-height: 35px; color: #666; font-size: 14px;}
+.customerlistall dl dd.fr p.moredetail{ line-height: 35px; font-size: 12px; color: #666;}
 
 /*cover 罩层*/
 .function{ z-index: 4; border-top: 1px solid #99; box-shadow: 0px -3px 5px #999; position: absolute; bottom: 0; left: 0; width: 100%; height: 150px; background-color: #fff;}
-.function input{ display: block; width: 250px; height: 30px; outline: none; border: none; border-radius:4px;  margin: 15px auto 0 auto;}
+.function p{ margin-top: 10px; text-align: center; line-height: 20px;}
+.function button{ display: block; width: 250px; height: 30px; outline: none; border: none; border-radius:4px;  margin: 15px auto 0 auto;}
+.function button a{ display: block; width: 240px; height: 30px; line-height: 30px;}
+
