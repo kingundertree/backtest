@@ -20,24 +20,40 @@
 <div ng-controller="customerlist">
 <input class="searchinput" type="search" ng-model="query" placeholder="请输入手机号或者昵称搜索">
 <ol class="customerlistall">
-	<dl class="clearfix" ng-repeat="user in users | filter:query">
+	<dl class="clearfix" ng-repeat="user in users | filter : query | orderBy : orderProp">
 		<dd class="fl">
 			<b>{{user.uname}}</b>
 			<span>{{user.uaddr}}</span>
 			<span>{{user.detail}}</span>
 		</dd>
 		<dd class="fr">
-			<p>{{user.lastcalltime}}</p>
+			<p>{{user.lct}}</p>
+			<a href="#" ng-click="phone(user);"><p ng-hide="user.extra">更多信息</p></a>
 		</dd>
+		<!--隐藏域
+		<div id="extra_{{user.uname}}" ng-hide=true>
+			<ul>
+				<li><span>{{user.uname}}</span><span>{{user.umobile}}</span></li>
+				<li ng-repeat="extra in user.extra">
+					<span>{{extra.uname}}</span>
+					<span>{{extra.umobile}}</span>
+				</li>
+			</ul>
+		</div>
+		-->
 	</dl>
 </ol>
 
 <!--弹出层-->
-<div class="cover">
+<div class="cover" id="cover">
 	<div class="function">
-		<input type="button" value="拨打" />
-		<input type="button" value="短信" />
-		<input type="button" value="取消" />
+		<p>
+			<span>{{user.uname}}</span><br>
+		</p>
+		<p ng-show="user.utel"><button><a href="tel:user.utel">拨打固话</a></button></p>
+		<p ng-show="user.umobile"><button><a href="tel:user.umobile">拨打手机</a></button></p>
+		<p ng-show="user.umobile"><button href="sms:user.utel">发短信</button></p>
+		<p><button>取消</button></p>
 	</div>
 </div>
 
