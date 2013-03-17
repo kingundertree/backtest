@@ -1,0 +1,46 @@
+<!doctype html>
+<html ng-app>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="MobileOptimized" content="320"  />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, 
+	maximum-scale=1.0" name="viewport" />
+	<meta name="description" content="德佑私客通讯录" />
+	<meta name="keywords" content="德佑私客通讯录" />
+	<meta name="author" content="mediapower.mobi" />
+	<meta name="copyright" content="Copyright &copy;dooioo.com 版权所有" />
+	<title>德佑私客通讯录</title>
+	<link type="text/css" rel="stylesheet" href="css/reset.css">
+	<link type="text/css" rel="stylesheet" href="css/style.css">
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/commom.js"></script>
+</head>
+<body>
+<div ng-controller="customerlist">
+<input class="searchinput" type="search" ng-model="query" placeholder="请输入手机号或者昵称搜索">
+<ol class="customerlistall">
+	<dl class="clearfix" ng-repeat="user in users | filter:query">
+		<dd class="fl">
+			<b>{{user.uname}}</b>
+			<span>{{user.uaddr}}</span>
+			<span>{{user.detail}}</span>
+		</dd>
+		<dd class="fr">
+			<p>{{user.lastcalltime}}</p>
+		</dd>
+	</dl>
+</ol>
+
+<!--弹出层-->
+<div class="cover">
+	<div class="function">
+		<input type="button" value="拨打" />
+		<input type="button" value="短信" />
+		<input type="button" value="取消" />
+	</div>
+</div>
+
+</div>
+</body>
+</html

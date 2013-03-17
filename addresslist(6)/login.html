@@ -1,0 +1,34 @@
+<!doctype html>
+<html ng-app>
+	<head>
+	<meta charset="UTF-8" />
+	<meta name="MobileOptimized" content="320"  />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, 
+	maximum-scale=1.0" name="viewport" />
+	<meta name="description" content="德佑私客通讯录" />
+	<meta name="keywords" content="德佑私客通讯录" />
+	<meta name="author" content="mediapower.mobi" />
+	<meta name="copyright" content="Copyright &copy;dooioo.com 版权所有" />
+	<title>德佑私客通讯录</title>
+	<link type="text/css" rel="stylesheet" href="css/reset.css">
+	<link type="text/css" rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/login.js"></script>
+	</head>
+	<body>
+		<div ng-controller="loginController" class="loginarea wrap">
+			<h1>客户通讯录</h1>
+			<form novalidate action="customer.html">
+				<p class="pinput">
+					工号: <input type="number" ng-model="user.name" name="useName" placeholder="你的工号"><br>
+				</p>
+				<p class="pinput">
+					密码: <input type="password" ng-model="user.pwd" name="userPsw" placeholder="你的密码"><br>
+				</p>
+				<input type="submit" value="登陆">
+			</form>
+		</div>
+	</body>
+</html>
